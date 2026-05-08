@@ -32,7 +32,7 @@ def cookies_to_header(cookies: list[dict]) -> str:
 
 
 def permission_judge(payload: dict) -> bool:
-    """权限校验，防判断是否登录成功。"""
+    """权限校验，判断是否登录成功。"""
     if not payload:
         return False
     if payload.get("code") == 0 and payload.get("msg", "") == "OK":
